@@ -1,0 +1,15 @@
+<resources>
+
+  <string name="app_name">MaterialPreference Sample</string>
+
+  <string name="original_category">Original Category</string>
+  <string name="original_preference">Original Preference</string>
+  <string name="original_summary">Original Summary</string>
+  <string name="original_summary_with_icon">Original Summary + Icon</string>
+
+  <string name="material_category">Material Category</string>
+  <string name="material_preference">Material Preference</string>
+  <string name="material_summary">Material Summary</string>
+  <string name="material_summary_with_icon">Material Summary + Icon</string>
+
+</resources>

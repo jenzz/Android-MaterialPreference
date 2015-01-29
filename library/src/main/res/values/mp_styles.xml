@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+  <style name="None"/>
+
+  <style name="TextAppearance.Material.Body1"
+      parent="None">
+    <item name="android:textSize">@dimen/text_size_body_1_material</item>
+    <item name="android:fontFamily" tools:targetApi="16">@string/font_family_body_1_material</item>
+    <item name="android:textColor">?android:attr/textColorPrimary</item>
+  </style>
+
+  <style name="TextAppearance.Material.Body2"
+      parent="None">
+    <item name="android:textSize">@dimen/text_size_body_2_material</item>
+    <item name="android:fontFamily" tools:targetApi="16">@string/font_family_body_2_material</item>
+  </style>
+
+</resources>

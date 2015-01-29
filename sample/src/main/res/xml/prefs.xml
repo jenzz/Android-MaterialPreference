@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+  <PreferenceCategory android:title="@string/original_category">
+    <Preference android:title="@string/original_preference"/>
+    <Preference
+        android:title="@string/original_preference"
+        android:summary="@string/original_summary"
+        />
+    <Preference
+        android:title="@string/original_preference"
+        android:summary="@string/original_summary_with_icon"
+        android:icon="@mipmap/ic_launcher"
+        />
+  </PreferenceCategory>
+
+  <com.jenzz.materialpreference.PreferenceCategory android:title="@string/material_category">
+    <com.jenzz.materialpreference.Preference android:title="@string/material_preference"/>
+    <com.jenzz.materialpreference.Preference
+        android:title="@string/material_preference"
+        android:summary="@string/material_summary"
+        />
+    <com.jenzz.materialpreference.Preference
+        android:title="@string/material_preference"
+        android:summary="@string/material_summary_with_icon"
+        android:icon="@mipmap/ic_launcher"
+        />
+  </com.jenzz.materialpreference.PreferenceCategory>
+
+</PreferenceScreen>
