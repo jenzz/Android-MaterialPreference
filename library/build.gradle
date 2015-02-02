@@ -25,6 +25,7 @@ publish {
   userOrg = 'jenzz'
   groupId = 'com.jenzz'
   artifactId = 'materialpreference'
+  uploadName = 'Android-MaterialPreference'
   version = VERSION_NAME
   description = 'A custom, backward-compatible implementation of a Material Design Preference aka settings item'
   website = 'https://github.com/jenzz/Android-MaterialPreference'
