@@ -15,6 +15,7 @@ import android.widget.TextView;
 import static android.text.TextUtils.isEmpty;
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
+import static com.jenzz.materialpreference.Typefaces.getRobotoRegular;
 
 public class Preference extends android.preference.Preference {
 
@@ -74,11 +75,13 @@ public class Preference extends android.preference.Preference {
     CharSequence title = getTitle();
     titleView.setText(title);
     titleView.setVisibility(!isEmpty(title) ? VISIBLE : GONE);
+    titleView.setTypeface(getRobotoRegular(getContext()));
 
     TextView summaryView = (TextView) view.findViewById(R.id.summary);
     CharSequence summary = getSummary();
     summaryView.setText(summary);
     summaryView.setVisibility(!isEmpty(summary) ? VISIBLE : GONE);
+    summaryView.setTypeface(getRobotoRegular(getContext()));
 
     ImageView imageView = (ImageView) view.findViewById(R.id.icon);
     if (icon == null && iconResId > 0) {

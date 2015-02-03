@@ -14,6 +14,7 @@ import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
 import static com.jenzz.materialpreference.ThemeUtils.ThemeColors;
 import static com.jenzz.materialpreference.ThemeUtils.resolveColors;
+import static com.jenzz.materialpreference.Typefaces.getRobotoMedium;
 
 public class PreferenceCategory extends android.preference.PreferenceCategory {
 
@@ -61,5 +62,6 @@ public class PreferenceCategory extends android.preference.PreferenceCategory {
     titleView.setText(title);
     titleView.setTextColor(themeColors.accentColor);
     titleView.setVisibility(!isEmpty(title) ? VISIBLE : GONE);
+    titleView.setTypeface(getRobotoMedium(getContext()));
   }
 }

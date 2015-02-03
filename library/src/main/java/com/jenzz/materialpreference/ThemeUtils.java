@@ -9,7 +9,7 @@ import android.graphics.Color;
 import static android.os.Build.VERSION.SDK_INT;
 import static android.os.Build.VERSION_CODES.LOLLIPOP;
 
-class ThemeUtils {
+final class ThemeUtils {
 
   // material_deep_teal_500
   static final int FALLBACK_COLOR = Color.parseColor("#009688");
