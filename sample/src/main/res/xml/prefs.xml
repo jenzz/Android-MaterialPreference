@@ -13,6 +13,11 @@
         android:summary="@string/original_summary_with_icon"
         android:icon="@mipmap/ic_launcher"
         />
+    <CheckBoxPreference
+        android:title="@string/original_checkbox_preference"
+        android:summaryOn="@string/original_checkbox_summary_on"
+        android:summaryOff="@string/original_checkbox_summary_off"
+        />
   </PreferenceCategory>
 
   <com.jenzz.materialpreference.PreferenceCategory android:title="@string/material_category">
@@ -25,6 +30,11 @@
         android:title="@string/material_preference"
         android:summary="@string/material_summary_with_icon"
         android:icon="@mipmap/ic_launcher"
+        />
+    <com.jenzz.materialpreference.CheckBoxPreference
+        android:title="@string/material_checkbox_preference"
+        android:summaryOn="@string/material_checkbox_summary_on"
+        android:summaryOff="@string/material_checkbox_summary_off"
         />
   </com.jenzz.materialpreference.PreferenceCategory>
 
