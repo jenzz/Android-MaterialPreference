@@ -19,6 +19,12 @@ import static com.jenzz.materialpreference.Typefaces.getRobotoRegular;
 
 public class Preference extends android.preference.Preference {
 
+  TextView titleView;
+  TextView summaryView;
+
+  ImageView imageView;
+  View imageFrame;
+
   private int iconResId;
   private Drawable icon;
 
@@ -71,26 +77,26 @@ public class Preference extends android.preference.Preference {
   protected void onBindView(View view) {
     super.onBindView(view);
 
-    TextView titleView = (TextView) view.findViewById(R.id.title);
     CharSequence title = getTitle();
+    titleView = (TextView) view.findViewById(R.id.title);
     titleView.setText(title);
     titleView.setVisibility(!isEmpty(title) ? VISIBLE : GONE);
     titleView.setTypeface(getRobotoRegular(getContext()));
 
-    TextView summaryView = (TextView) view.findViewById(R.id.summary);
     CharSequence summary = getSummary();
+    summaryView = (TextView) view.findViewById(R.id.summary);
     summaryView.setText(summary);
     summaryView.setVisibility(!isEmpty(summary) ? VISIBLE : GONE);
     summaryView.setTypeface(getRobotoRegular(getContext()));
 
-    ImageView imageView = (ImageView) view.findViewById(R.id.icon);
     if (icon == null && iconResId > 0) {
       icon = getContext().getResources().getDrawable(iconResId);
     }
+    imageView = (ImageView) view.findViewById(R.id.icon);
     imageView.setImageDrawable(icon);
     imageView.setVisibility(icon != null ? VISIBLE : GONE);
 
-    View imageFrame = view.findViewById(R.id.icon_frame);
+    imageFrame = view.findViewById(R.id.icon_frame);
     imageFrame.setVisibility(icon != null ? VISIBLE : GONE);
   }
 
