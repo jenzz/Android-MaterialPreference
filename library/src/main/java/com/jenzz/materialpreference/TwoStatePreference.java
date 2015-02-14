@@ -5,9 +5,10 @@ import android.content.SharedPreferences;
 import android.content.res.TypedArray;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
+
+import static android.text.TextUtils.isEmpty;
 
 public abstract class TwoStatePreference extends Preference {
 
@@ -184,17 +185,17 @@ public abstract class TwoStatePreference extends Preference {
   void syncSummaryView(View view) {
     // Sync the summary view
     boolean useDefaultSummary = true;
-    if (isChecked && !TextUtils.isEmpty(summaryOn)) {
+    if (isChecked && !isEmpty(summaryOn)) {
       summaryView.setText(summaryOn);
       useDefaultSummary = false;
-    } else if (!isChecked && !TextUtils.isEmpty(summaryOff)) {
+    } else if (!isChecked && !isEmpty(summaryOff)) {
       summaryView.setText(summaryOff);
       useDefaultSummary = false;
     }
 
     if (useDefaultSummary) {
       CharSequence summary = getSummary();
-      if (!TextUtils.isEmpty(summary)) {
+      if (!isEmpty(summary)) {
         summaryView.setText(summary);
         useDefaultSummary = false;
       }
@@ -255,16 +256,15 @@ public abstract class TwoStatePreference extends Preference {
       super(superState);
     }
 
-    public static final Parcelable.Creator<SavedState> CREATOR =
-        new Parcelable.Creator<SavedState>() {
-          public SavedState createFromParcel(Parcel in) {
-            return new SavedState(in);
-          }
+    public static final Creator<SavedState> CREATOR = new Creator<SavedState>() {
+      public SavedState createFromParcel(Parcel in) {
+        return new SavedState(in);
+      }
 
-          public SavedState[] newArray(int size) {
-            return new SavedState[size];
-          }
-        };
+      public SavedState[] newArray(int size) {
+        return new SavedState[size];
+      }
+    };
   }
 }
 

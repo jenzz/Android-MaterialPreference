@@ -6,8 +6,8 @@ import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 
-import static android.os.Build.VERSION.SDK_INT;
 import static android.os.Build.VERSION_CODES.LOLLIPOP;
+import static android.support.v7.internal.VersionUtils.isAtLeastL;
 
 final class ThemeUtils {
 
@@ -24,7 +24,7 @@ final class ThemeUtils {
     int accentColor = FALLBACK_COLOR;
 
     // on Lollipop, grab system colorAccent attribute
-    if (SDK_INT >= LOLLIPOP) {
+    if (isAtLeastL()) {
       TypedArray typedArray =
           theme.obtainStyledAttributes(new int[] { android.R.attr.colorAccent });
       accentColor = typedArray.getColor(0, accentColor);

@@ -4,7 +4,6 @@ import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import static android.content.Context.LAYOUT_INFLATER_SERVICE;
+import static android.os.Build.VERSION_CODES.LOLLIPOP;
 import static android.text.TextUtils.isEmpty;
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
@@ -43,7 +44,7 @@ public class Preference extends android.preference.Preference {
     init(context, attrs, defStyleAttr, 0);
   }
 
-  @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+  @TargetApi(LOLLIPOP)
   public Preference(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
     super(context, attrs, defStyleAttr, defStyleRes);
     init(context, attrs, defStyleAttr, defStyleRes);
@@ -60,7 +61,7 @@ public class Preference extends android.preference.Preference {
   @Override
   protected View onCreateView(ViewGroup parent) {
     LayoutInflater layoutInflater =
-        (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        (LayoutInflater) getContext().getSystemService(LAYOUT_INFLATER_SERVICE);
     View layout = layoutInflater.inflate(R.layout.mp_preference, parent, false);
 
     ViewGroup widgetFrame = (ViewGroup) layout.findViewById(R.id.widget_frame);

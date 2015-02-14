@@ -2,11 +2,12 @@ package com.jenzz.materialpreference;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.v7.internal.VersionUtils;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+
+import static android.support.v7.internal.VersionUtils.isAtLeastL;
 
 public class CheckBoxPreference extends TwoStatePreference {
 
@@ -35,9 +36,11 @@ public class CheckBoxPreference extends TwoStatePreference {
     TypedArray typedArray = context.obtainStyledAttributes(attrs, new int[] {
         android.R.attr.summaryOn, android.R.attr.summaryOff, android.R.attr.disableDependentsState
     }, defStyleAttr, defStyleRes);
+
     setSummaryOn(typedArray.getString(0));
     setSummaryOff(typedArray.getString(1));
     setDisableDependentsState(typedArray.getBoolean(3, false));
+
     typedArray.recycle();
   }
 
@@ -54,7 +57,7 @@ public class CheckBoxPreference extends TwoStatePreference {
     CheckBox checkboxView = (CheckBox) view.findViewById(R.id.checkbox);
     checkboxView.setChecked(isChecked());
 
-    if (VersionUtils.isAtLeastL()) {
+    if (isAtLeastL()) {
       // remove circular background when pressed
       checkboxView.setBackgroundDrawable(null);
     }
