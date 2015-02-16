@@ -6,8 +6,8 @@ import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 
+import static android.os.Build.VERSION.SDK_INT;
 import static android.os.Build.VERSION_CODES.LOLLIPOP;
-import static android.support.v7.internal.VersionUtils.isAtLeastL;
 
 final class ThemeUtils {
 
@@ -16,6 +16,10 @@ final class ThemeUtils {
 
   private ThemeUtils() {
     // no instances
+  }
+
+  static boolean isAtLeastL() {
+      return SDK_INT >= 21;
   }
 
   @TargetApi(LOLLIPOP)

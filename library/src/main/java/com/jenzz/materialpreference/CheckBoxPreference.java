@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 
-import static android.support.v7.internal.VersionUtils.isAtLeastL;
+import static com.jenzz.materialpreference.ThemeUtils.isAtLeastL;
 
 public class CheckBoxPreference extends TwoStatePreference {
 
