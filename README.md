@@ -12,8 +12,7 @@ Screenshots
 Usage
 -----
 In your settings XML file that describes your preferences (must be located in `res/xml/` folder)
-just use the custom [`Preference`](http://developer.android.com/reference/android/preference/Preference.html)
-and [`PreferenceCategory`](http://developer.android.com/reference/android/preference/PreferenceCategory.html) like this:
+just use the custom implementations like this:
 
 ```xml
 <com.jenzz.materialpreference.PreferenceCategory
@@ -23,14 +22,20 @@ and [`PreferenceCategory`](http://developer.android.com/reference/android/prefer
     android:title="Material Preference"
     android:summary="Material Summary" />
 
+  <com.jenzz.materialpreference.CheckBoxPreference
+    android:title="Material CheckBoxPreference"
+    android:summaryOn="Material CheckBox Summary On"
+    android:summaryOff="Material CheckBox Summary Off" />
+
 </com.jenzz.materialpreference.PreferenceCategory>
 ```
 
 That's it. You can use all the attributes you know from the original preferences.
 
-You're probably wondering why there's only a Material Design version
-of [`Preference`](http://developer.android.com/reference/android/preference/Preference.html)
-and one for [`PreferenceCategory`](http://developer.android.com/reference/android/preference/PreferenceCategory.html).
+You're probably wondering why there are only Material Design versions
+of [`Preference`](http://developer.android.com/reference/android/preference/Preference.html),
+[`PreferenceCategory`](http://developer.android.com/reference/android/preference/PreferenceCategory.html)
+and [`CheckBoxPreference`](http://developer.android.com/reference/android/preference/CheckBoxPreference.html).
 Where are [`ListPreference`](http://developer.android.com/reference/android/preference/ListPreference.html),
 [`EditTextPreference`](http://developer.android.com/reference/android/preference/EditTextPreference.html), etc?
 I don't use them. Instead I just show a simple [`Preference`](http://developer.android.com/reference/android/preference/Preference.html)
@@ -48,6 +53,10 @@ Theming
   <item name="mp_colorAccent">#bada55</item>
 </style>
 ```
+
+Also note that the `Activity` hosting your preferences screen **must** extend `ActionBarActivity` in order for the `CheckBox` tinting to work.
+The easiest solution to accomplish that is to delegate all your preferences logic (including the inflation) to a `PreferenceFragment`
+just like it is done in the [sample project](https://github.com/jenzz/Android-MaterialPreference/tree/master/sample).
 
 Example
 -------
