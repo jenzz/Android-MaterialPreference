@@ -13,13 +13,12 @@ import static android.os.Build.VERSION_CODES.LOLLIPOP;
 import static android.text.TextUtils.isEmpty;
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
-import static com.jenzz.materialpreference.ThemeUtils.ThemeColors;
-import static com.jenzz.materialpreference.ThemeUtils.resolveColors;
+import static com.jenzz.materialpreference.ThemeUtils.resolveAccentColor;
 import static com.jenzz.materialpreference.Typefaces.getRobotoMedium;
 
 public class PreferenceCategory extends android.preference.PreferenceCategory {
 
-  private ThemeColors themeColors;
+  private int accentColor;
 
   public PreferenceCategory(Context context) {
     super(context);
@@ -44,7 +43,7 @@ public class PreferenceCategory extends android.preference.PreferenceCategory {
   }
 
   private void init() {
-    themeColors = resolveColors(getContext());
+    accentColor = resolveAccentColor(getContext());
   }
 
   @Override
@@ -61,7 +60,7 @@ public class PreferenceCategory extends android.preference.PreferenceCategory {
     CharSequence title = getTitle();
     TextView titleView = (TextView) view.findViewById(R.id.title);
     titleView.setText(title);
-    titleView.setTextColor(themeColors.accentColor);
+    titleView.setTextColor(accentColor);
     titleView.setVisibility(!isEmpty(title) ? VISIBLE : GONE);
     titleView.setTypeface(getRobotoMedium(getContext()));
   }
