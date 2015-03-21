@@ -7,6 +7,7 @@
   <string name="original_checkbox_preference">Original CheckBox Preference</string>
   <string name="original_summary">Original Summary</string>
   <string name="original_summary_with_icon">Original Summary + Icon</string>
+  <string name="original_checkbox_key">original_checkbox_key</string>
   <string name="original_checkbox_summary_on">Original CheckBox Summary On</string>
   <string name="original_checkbox_summary_off">Original CheckBox Summary Off</string>
 
@@ -15,7 +16,8 @@
   <string name="material_checkbox_preference">Material CheckBox Preference</string>
   <string name="material_summary">Material Summary</string>
   <string name="material_summary_with_icon">Material Summary + Icon</string>
+  <string name="material_checkbox_key">material_checkbox_key</string>
   <string name="material_checkbox_summary_on">Material CheckBox Summary On</string>
-  <string name="material_checkbox_summary_off">Material CheckBox Summary On</string>
+  <string name="material_checkbox_summary_off">Material CheckBox Summary Off</string>
 
 </resources>
