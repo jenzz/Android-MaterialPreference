@@ -39,7 +39,7 @@ public class CheckBoxPreference extends TwoStatePreference {
 
     setSummaryOn(typedArray.getString(0));
     setSummaryOff(typedArray.getString(1));
-    setDisableDependentsState(typedArray.getBoolean(3, false));
+    setDisableDependentsState(typedArray.getBoolean(2, false));
 
     typedArray.recycle();
   }
