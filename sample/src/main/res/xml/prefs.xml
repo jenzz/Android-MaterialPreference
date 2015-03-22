@@ -21,6 +21,11 @@
         android:summaryOff="@string/original_checkbox_summary_off"
         android:disableDependentsState="true"
         />
+    <SwitchPreference
+        android:title="@string/original_switch_preference"
+        android:summaryOn="@string/original_switch_preference_on"
+        android:summaryOff="@string/original_switch_preference_off"
+        />
   </PreferenceCategory>
 
   <com.jenzz.materialpreference.PreferenceCategory android:title="@string/material_category">
@@ -41,6 +46,11 @@
         android:summaryOn="@string/material_checkbox_summary_on"
         android:summaryOff="@string/material_checkbox_summary_off"
         android:disableDependentsState="true"
+        />
+    <com.jenzz.materialpreference.SwitchPreference
+        android:title="@string/material_switch_preference"
+        android:summaryOn="@string/material_switch_preference_on"
+        android:summaryOff="@string/material_switch_preference_off"
         />
   </com.jenzz.materialpreference.PreferenceCategory>
 
