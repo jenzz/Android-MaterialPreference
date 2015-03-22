@@ -10,6 +10,9 @@
   <string name="original_checkbox_key">original_checkbox_key</string>
   <string name="original_checkbox_summary_on">Original CheckBox Summary On</string>
   <string name="original_checkbox_summary_off">Original CheckBox Summary Off</string>
+  <string name="original_switch_preference">Original Switch Preference</string>
+  <string name="original_switch_preference_on">Original Switch Summary On</string>
+  <string name="original_switch_preference_off">Original Switch Summary Off</string>
 
   <string name="material_category">Material Category</string>
   <string name="material_preference">Material Preference</string>
@@ -19,5 +22,8 @@
   <string name="material_checkbox_key">material_checkbox_key</string>
   <string name="material_checkbox_summary_on">Material CheckBox Summary On</string>
   <string name="material_checkbox_summary_off">Material CheckBox Summary Off</string>
+  <string name="material_switch_preference">Material Switch Preference</string>
+  <string name="material_switch_preference_on">Material Switch Summary On</string>
+  <string name="material_switch_preference_off">Material Switch Summary Off</string>
 
 </resources>
