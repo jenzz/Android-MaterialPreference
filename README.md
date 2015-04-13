@@ -68,7 +68,7 @@ Download
 Grab it via Gradle:
 
 ```groovy
-compile 'com.jenzz:materialpreference:1.2.1'
+compile 'com.jenzz:materialpreference:1.3'
 ```
 
 License
