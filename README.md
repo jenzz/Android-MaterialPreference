@@ -1,3 +1,15 @@
+DEPRECATED
+==========
+Android-MaterialPreference is deprecated. No more development will be taking place.
+
+Use Google's official support libraries instead [com.android.support:preference-v7](https://developer.android.com/topic/libraries/support-library/packages.html#v7-preference) and [com.android.support:preference-v14](https://developer.android.com/topic/libraries/support-library/packages.html#v14-preference).
+
+If you need some assistance in building a fully **Material Design** settings screen, here is a great series of blog articles on this topic:  
+[Building an Android Settings Screen (Part 1) - How to Create and Fix the Overview Screen](https://medium.com/@JakobUlbrich/building-a-settings-screen-for-android-part-1-5959aa49337c)  
+[Building an Android Settings Screen (Part 2) - How to Create and Fix the Dialogs](https://medium.com/@JakobUlbrich/building-a-settings-screen-for-android-part-2-2ba63e2d7d1d)  
+[Building an Android Settings Screen (Part 3) - How to Create Custom Preferences](https://medium.com/@JakobUlbrich/building-a-settings-screen-for-android-part-3-ae9793fd31ec)  
+[Building an Android Settings Screen (Part 4) - How to Use a Custom Layout for the Preference Fragment](https://medium.com/@JakobUlbrich/building-an-android-settings-screen-part-4-9558029827b7)
+
 Android - MaterialPreference
 ============================
 * A simple backward-compatible implementation of a Material Design Preference aka settings item
